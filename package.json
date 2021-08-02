@@ -1,0 +1,67 @@
+{
+  "name": "hede",
+  "version": "1.0.0",
+  "description": "Helper for Depression",
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "test": "jest --maxWorkers 1",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "migrate": "npm run typeorm migration:create -- -c production -n NewMigration"
+  },
+  "author": "hubtwork <hubtwork@gmail.com> (http://github.com/Hubtwork)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.1",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.168",
+    "@types/morgan": "^1.9.2",
+    "@types/mysql": "^2.15.18",
+    "@types/node": "^14.14.41",
+    "jest": "^26.6.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-winston": "^4.1.0",
+    "fs": "*",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "ts-jest": "^26.5.5",
+    "typeorm": "^0.2.32",
+    "winston": "^3.3.3",
+    "lodash": "^4.17.21"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": true
+      }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/__test__/setup.ts"
+    ]
+  }
+}
