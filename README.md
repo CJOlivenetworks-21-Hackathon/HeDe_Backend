@@ -2,4 +2,9 @@
 
 ## Stack
 - Node.js
-- Mongo-DB
+- MariaDB
+
+### Routers
+- test : Connection testing router
+
+## API Baseline

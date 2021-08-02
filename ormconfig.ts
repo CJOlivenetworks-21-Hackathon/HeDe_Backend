@@ -25,7 +25,7 @@ const dbConnectionOptions: ConnectionOptions[] = [
     {
         name: "development",
         type: "mariadb",
-        database: 'dev_auth',
+        database: db.database_dev,
         synchronize: true,
         dropSchema: true,
         logging: false,
@@ -40,7 +40,7 @@ const dbConnectionOptions: ConnectionOptions[] = [
     {
         name: "test",
         type: "mariadb",
-        database: 'test_auth',
+        database: db.database_test,
         synchronize: true,
         dropSchema: true,
         logging: false,
